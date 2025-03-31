@@ -8,6 +8,18 @@ export default async function Home() {
   const session = await auth();
   return (
     <div className="container mx-auto px-4 py-8">
+      {/* Hero Section with a Poster */}
+      <div className="relative w-full mb-16">
+  <img
+    src="banner2.png"
+    alt="Election Banner"
+    className="w-full h-64 object-cover rounded-lg shadow-md"
+  />
+  <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-0 flex items-center justify-center">
+    {/* Content can be added here if needed */}
+  </div>
+</div>
+
       <section className="text-center mb-16">
         <h1 className="text-4xl font-bold mb-4">Welcome to Secure Election Portal</h1>
         <p className="text-xl text-muted-foreground mb-8">
@@ -34,7 +46,7 @@ export default async function Home() {
       <section className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
         <Card>
           <CardHeader>
-            <Vote className="w-8 h-8 mb-2 text-primary" />
+            <img src="secure.png" alt="Secure Voting" className="w-16 h-16 mx-auto mb-2" />
             <CardTitle>Secure Voting</CardTitle>
             <CardDescription>
               State-of-the-art encryption and security measures
@@ -44,7 +56,7 @@ export default async function Home() {
 
         <Card>
           <CardHeader>
-            <UserCheck className="w-8 h-8 mb-2 text-primary" />
+            <img src="easy.png" alt="Easy Registration" className="w-16 h-16 mx-auto mb-2" />
             <CardTitle>Easy Registration</CardTitle>
             <CardDescription>
               Simple and quick voter registration process
@@ -54,7 +66,7 @@ export default async function Home() {
 
         <Card>
           <CardHeader>
-            <Calendar className="w-8 h-8 mb-2 text-primary" />
+            <img src="multiple.png" alt="Multiple Elections" className="w-16 h-16 mx-auto mb-2" />
             <CardTitle>Multiple Elections</CardTitle>
             <CardDescription>
               Support for various election types and constituencies
@@ -64,7 +76,7 @@ export default async function Home() {
 
         <Card>
           <CardHeader>
-            <Shield className="w-8 h-8 mb-2 text-primary" />
+            <img src="privacy.png" alt="Data Privacy" className="w-16 h-16 mx-auto mb-2" />
             <CardTitle>Data Privacy</CardTitle>
             <CardDescription>
               Your information is protected and confidential
@@ -78,6 +90,7 @@ export default async function Home() {
         <div className="grid gap-8">
           <Card>
             <CardHeader>
+              <img src="register.png" alt="Register as a Voter" className="w-12 h-12 mx-auto mb-2" />
               <CardTitle>1. Register as a Voter</CardTitle>
               <CardContent>
                 Create your account with valid identification and proof of eligibility
@@ -87,6 +100,7 @@ export default async function Home() {
 
           <Card>
             <CardHeader>
+              <img src="validate.png" alt="Verify Your Identity" className="w-12 h-12 mx-auto mb-2" />
               <CardTitle>2. Verify Your Identity</CardTitle>
               <CardContent>
                 Complete the verification process to ensure election integrity
@@ -96,6 +110,7 @@ export default async function Home() {
 
           <Card>
             <CardHeader>
+              <img src="cast.png" alt="Cast Your Vote" className="w-12 h-12 mx-auto mb-2" />
               <CardTitle>3. Cast Your Vote</CardTitle>
               <CardContent>
                 Participate in elections securely from anywhere
